@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetables</title>
+    <style>
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px auto;
+            gap: 9px;
+            justify-content: center;
+        }
+        .card {
+            border: 2px solid lightgray;
+            border-radius: 7px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-content {
+            padding: 10px;
+            text-align: center;
+        }
+        .btn, .btn-link, .hover {
+            display: none;
+        }
+        .order {
+            display: inline-block;
+            border-radius: 9px;
+            padding: 8px 50px;
+            background-color: rgb(10, 179, 66);
+            color: white;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: transform 0.3s;
+        }
+        .order:hover {
+            transform: scale(1.05);
+        }
+        @media screen and (min-width: 1000px) {
+            .card {
+                width: 300px;
+                height: 199px;
+            }
+            .card-content h2{
+                margin-top: 0px;
+                background-color: black;
+                color: white;
+            }
+            .card-content{
+                background-color: black;
+            }
+            .hover {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            .hover h2{
+                margin-top: -3px;
+            }
+            .card:hover .hover {
+                opacity: 1;
+            }
+            .card-img{
+                background-color: black;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .card {
+                width: 170px;
+                height: 250px;
+            }
+            .card-img{
+                background-color: black;
+            }
+            .btn, .btn-link {
+                display: inline-block;
+            }
+            .btn {
+                position: absolute;
+                top: 210px;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 2px solid lightgray;
+                border-radius: 7px;
+                padding: 7px 30px;
+                background-color: black;
+            }
+            .btn-link {
+                color: white;
+                text-decoration: none;
+            }
+            .card-content h2{
+                margin-top: -10px;
+            }
+            .card-content p{
+                margin-top: -10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <div class="card">
+            <img src="https://img.freepik.com/premium-photo/potatoes-isolated-white-background-with-clipping-path_625448-1013.jpg?w=740" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Potato's</h2>
+                <p>KG: 50 Rupees/-</p>
+                <button class="btn"><a href="potato.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Potato's</h2>
+                <p><strong>KG: 60</strong></p>
+                <p>MRP: 50 Rupees/-</p>
+                <a href="potato.html" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/free-photo/fresh-red-tomatoes_2829-13449.jpg?t=st=1720265165~exp=1720268765~hmac=12456b5028e25d832c68a81d7c775fe3d7b5d6c59c7f160c116be28aae42a8d6&w=740" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Tomato's</h2>
+                <p>KG: 70 Rupees/-</p>
+                <button class="btn"><a href="tomato.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Tomato</h2>
+                <p><strong>KG: 100</strong></p>
+                <p>MRP: 70 Rupees/-</p>
+                <a href="tomato.html" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/free-photo/green-chili-peppers_2829-14199.jpg?t=st=1720265280~exp=1720268880~hmac=75fa6580fc5943dfaef2a3851d6c3c9518457e23e73b3f01ccf021da953644f8&w=740" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Green Chili</h2>
+                <p>KG: 50 Rupees/-</p>
+                <button class="btn"><a href="green chilli.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Green Chili</h2>
+                <p><strong>KG: 60</strong></p>
+                <p>MRP: 50 Rupees/-</p>
+                <a href="green chilli.html" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/free-photo/green-lettuce-white-surface_144627-45188.jpg?ga=GA1.1.2033595780.1705061197&semt=sph" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Cabbage</h2>
+                <p>KG: 50 Rupees/-</p>
+                <button class="btn"><a href="cabbage.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Cabbage</h2>
+                <p><strong>KG: 60</strong></p>
+                <p>MRP: 50 Rupees/-</p>
+                <a href="cabbage.html" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/free-photo/realistic-image-aubergine-coloured-background_125540-3797.jpg?ga=GA1.1.2033595780.1705061197&semt=sph" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Brinjal</h2>
+                <p>KG: 50 Rupees/-</p>
+                <button class="btn"><a href="brinjal.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Brinjal</h2>
+                <p><strong>KG: 60</strong></p>
+                <p>MRP: 50 Rupees/-</p>
+                <a href="brinjal.html" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/premium-photo/carrot-bunch-isolated-organic-vegetable-crop-fresh-carrot-bunch-white-background_162695-4486.jpg?ga=GA1.1.2033595780.1705061197&semt=sph" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Carrot</h2>
+                <p>KG: 50 Rupees/-</p>
+                <button class="btn"><a href="carrot.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Carrot</h2>
+                <p><strong>KG: 70</strong></p>
+                <p>MRP: 50 Rupees/-</p>
+                <a href="carrot.html" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/free-photo/high-angle-shot-fresh-green-peas-wooden-table_181624-53478.jpg?ga=GA1.1.2033595780.1705061197&semt=sph" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Peas</h2>
+                <p>KG: 60 Rupees/-</p>
+                <button class="btn"><a href="peas.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Peas</h2>
+                <p><strong>KG: 70</strong></p>
+                <p>MRP: 60 Rupees/-</p>
+                <a href="peas.html" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSMkpsip8W6grYLI3mNDzIl73BYpp5VlX1YU95B4SkIMjjt561Dzq7j6m_Q1Efjd6e0tStgPsQjS8AwIxumlB_qWHnhIQgW8siLfXV9AIomm24K8qOWAaiU" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>DrumSticks</h2>
+                <p>KG: 40 Rupees/-</p>
+                <button class="btn"><a href="#" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>DrumSticks</h2>
+                <p><strong>KG: 40</strong></p>
+                <p>MRP: 35 Rupees/-</p>
+                <a href="#" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/free-photo/fresh-cucumbers-with-slices-carrot-wooden-board-high-quality-photo_114579-36039.jpg?ga=GA1.1.2033595780.1705061197&semt=ais_user" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Cucumber</h2>
+                <p>KG: 50 Rupees/-</p>
+                <button class="btn"><a href="cucu.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Cucumber</h2>
+                <p><strong>KG: 60</strong></p>
+                <p>MRP: 50 Rupees/-</p>
+                <a href="cucu.html" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/free-psd/cauliflower-isolated-transparent-background_191095-17069.jpg?ga=GA1.1.2033595780.1705061197&semt=sph" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Cauliflower</h2>
+                <p>KG: 70 Rupees/-</p>
+                <button class="btn"><a href="cali.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Cauliflower</h2>
+                <p><strong>KG: 90</strong></p>
+                <p>MRP: 70 Rupees/-</p>
+                <a href="cali.html" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/free-psd/fresh-red-beet-png-isolated-transparent-background_191095-9734.jpg?ga=GA1.1.2033595780.1705061197&semt=sph" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Beetroot</h2>
+                <p>KG: 50 Rupees/-</p>
+                <button class="btn"><a href="beet.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Beetroot</h2>
+                <p><strong>KG: 90</strong></p>
+                <p>MRP: 50 Rupees/-</p>
+                <a href="beet.html" class="order">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/free-photo/close-up-photo-fresh-organic-peppers-isolated-white-surface_114579-64433.jpg?ga=GA1.1.2033595780.1705061197&semt=sph" alt="Green Chili" class="card-img">
+            <div class="card-content">
+                <h2>Capsicum</h2>
+                <p>KG: 40 Rupees/-</p>
+                <button class="btn"><a href="cap.html" class="btn-link">OrderNow</a></button>
+            </div>
+            <div class="hover">
+                <h2>Capsicum</h2>
+                <p><strong>KG: 60</strong></p>
+                <p>MRP: 40 Rupees/-</p>
+                <a href="cap.html" class="order">Book Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
